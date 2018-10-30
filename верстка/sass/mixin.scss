@@ -1,0 +1,28 @@
+@mixin border-radius($radius) { 
+    -webkit-border-radius: $radius; 
+    -moz-border-radius: $radius; 
+    -ms-border-radius: $radius; 
+    border-radius: $radius; 
+}
+
+@mixin headline ($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
+@mixin  transit($what: all, $when: 0.3s, $how: ease) {
+  -webkit-transition: $what $when $how;
+  -moz-transition: $what $when $how;
+  -ms-transition: $what $when $how;
+  -o-transition: $what $when $how;
+  transition: $what $when $how;
+}
+
+@mixin font($size, $weight: 300, $colors: inherit, $style: normal) {
+    font: {
+        size: $size;
+        weight: $weight;
+        style: $style;
+    }
+     color: $colors;
+}

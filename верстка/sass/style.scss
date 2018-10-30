@@ -1,0 +1,247 @@
+@import 'mixin.scss';
+@import 'fonts.scss';
+
+img {
+	width:100%;
+	max-width:100%;
+}
+
+a:hover{
+    text-decoration: none;
+    color:inherit;
+}
+
+body {
+    width:100%;
+    height:100%;
+    position:relative;
+    font-family:Roboto, Open sans,sans-serif;
+    @include font(16px, normal, #000000);
+}
+
+h3 {
+    @include font(36px, bold, inherit);
+    text-align: center;
+    line-height: inherit;
+    margin: 10px 0 60px;
+} 
+
+
+h4 {
+    @include font(25px, bold, inherit);
+    margin: 0 0  25px 15px;
+}
+
+.container {
+    overflow: hidden;
+}
+.nav {
+    padding-right: 0;
+}
+.logo {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 35px 25px;
+    margin-bottom: 100px;
+    position: relative;
+    background: #00544e;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right bottom, #00544e 49.5%, transparent 50%);	
+}
+.logo h2 {
+    position: relative;
+    margin: 0;
+    line-height: inherit;
+    @include font(67px, 900, #ffffff);
+}
+
+.logo h2:first-child {
+    padding-left: 50px;
+}
+
+.logo span {
+    position: absolute;
+    line-height: 65px;
+    left: 0;
+    top: calc(50% - 34px);
+    @include font(92px, 900);
+}
+
+nav {
+    padding: 35px 0 0;
+}
+nav a {
+    display: block;
+    text-align: center;
+    line-height: 24px;
+    @include font(24px, 300, #000000);
+    padding: 40px 0;
+} 
+
+nav a:hover {
+    color: #00544e;
+    text-decoration: underline;
+    @include transit;
+}
+
+nav a:last-child {
+    margin-top: 35px;
+    padding: 0;
+    height: 85px;
+    line-height: 85px;
+    @include font(24px, bold, #Ffffff);
+    background-color: #1f0000;
+}
+
+.main {
+    padding-left: 0;
+    padding-right: 0;
+}
+.main_pic {
+    position: relative;
+    width: 100%;
+    height: 845px;
+    padding: 35px;
+    background: url(../img/kuala-lumpur-1820944_1920.jpg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_pic:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(70,70,68,0.5);
+}
+
+.main .pic_text {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    margin: 0;
+    @include font(40px, 300, #Ffffff);
+    text-align: right;
+    z-index: 3;
+}
+
+.pic_reg {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    text-align: center;
+     z-index: 2;
+}
+
+.main .date {
+     @include font(50px, 300, #Ffffff);
+}
+
+.pic_reg .reg {
+    display: inline-block;
+    width: 230px;
+    height: 55px;
+    line-height: 55px;
+    @include font(24px, 300, #Ffffff);
+    background: #008bff;
+    @include border-radius(30px);
+   
+}
+
+.pic_reg .reg:hover {
+    background: #044d8b;
+   @include transit;
+}
+
+.pic_reg .small_text {
+    margin: 20px 0 0 ;
+    display: block;
+     @include font(13px, 300, #Ffffff, italic);
+}
+
+.pic_reg a.small_text {
+    text-decoration: underline;
+    margin-top: 10px;
+     font-style: normal;
+}
+
+
+
+.speaker {
+    padding: 20px 15px;
+    border-left: 1px solid #6aaca8;
+    border-top: 1px solid #c5c5c3;
+}
+
+.speaker_block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.speaker_item {
+     margin: 0 15px;
+}
+
+.speaker_item img {
+    width: 100%;
+    margin-bottom: 15px;
+    @include border-radius(50%);
+}
+
+.speaker_item:not(:last-child) p {
+    margin-bottom: 15px;
+     @include font(23px, 300, #000000);    
+}
+
+.speaker_item span {
+    position: relative;
+}
+
+.speaker_item span:after {
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -5px;
+    height: 3px;
+    width: 100%;
+    background: #00544e;
+}
+
+.speaker_item:not(:last-child) p:last-child {
+    margin: 0;
+    @include font(16px, 500, #007670);
+} 
+
+.speaker_item:last-child a {
+    display: inline-block;
+    width: 158px;
+    height: 38px;
+    line-height: 38px;
+    @include font(18px, 300, #ffffff);
+    text-align: center;
+    background: #008bff;
+   @include border-radius(30px);
+}
+
+.speaker_item:last-child a:hover {
+    background: #044d8b;;
+    @include transit;
+}
+
+
+.menu_icon {
+    display: none;
+}
